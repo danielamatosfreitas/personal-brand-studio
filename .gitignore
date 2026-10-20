@@ -1,0 +1,16 @@
+node_modules/
+.next/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+.env.*
+!.env.example
+test-output/
+*.tsbuildinfo
+next-env.d.ts
+.claude/
+backend/config/persona.txt
+.sync_token

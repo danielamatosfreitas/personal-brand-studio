@@ -1,0 +1,186 @@
+/* Fontes auto-hospedadas em public/fonts/ (@font-face abaixo) -- sem
+   dependência de Google Fonts em runtime. EB Garamond é a fonte final:
+   Cormorant Garamond (2026-09-18) e depois Cormorant, família-base do mesmo
+   projeto (2026-09-23), tinham o glifo do circunflexo (â/ê/ô) com defeito de
+   desenho em tamanho grande de exibição -- confirmado com fontTools + 3
+   renderizadores independentes, presente na superfamília Cormorant inteira,
+   não só na Garamond. EB Garamond (fundição diferente) confirmado limpo em
+   todos os pesos usados. */
+
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('/fonts/EBGaramond-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: block;
+}
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('/fonts/EBGaramond-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('/fonts/EBGaramond-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: block;
+}
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('/fonts/EBGaramond-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'EB Garamond';
+  src: url('/fonts/EBGaramond-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'DM Sans';
+  src: url('/fonts/DMSans-400.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: 'DM Sans';
+  src: url('/fonts/DMSans-500.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    background-color: #F3EEE3;
+    color: #1F1F1D;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-weight: 400;
+  }
+
+  h1, h2, h3 {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-weight: 600;
+    color: #1F1F1D;
+  }
+
+  ::selection {
+    background-color: #2C4A3B;
+    color: #F3EEE3;
+  }
+
+  :focus-visible {
+    outline: 2px solid #2C4A3B;
+    outline-offset: 2px;
+  }
+
+  textarea, input, select {
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  /* Ação principal da tela: terracota. */
+  .btn-primary {
+    @apply bg-brand-accent text-white px-5 py-2.5 rounded-brand font-sans font-medium text-sm
+           hover:bg-brand-accent-dark transition-colors duration-150
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Mesma ação principal, para o botão de publicar do painel de revisão. */
+  .btn-accent {
+    @apply bg-brand-accent text-white px-5 py-2.5 rounded-brand font-sans font-medium text-sm
+           hover:bg-brand-accent-dark transition-colors duration-150
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Ação secundária: contorno fino grafite. */
+  .btn-outline {
+    @apply border border-brand-border-strong text-brand-text bg-transparent px-5 py-2.5
+           rounded-brand font-sans font-medium text-sm
+           hover:bg-brand-surface-muted hover:border-brand-text-light transition-colors duration-150
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Superfície padrão: borda fina, sem sombra. */
+  .card {
+    @apply bg-brand-surface border border-brand-border rounded-brand-lg p-6 sm:p-8;
+  }
+
+  /* Título de página (40 a 48 px) e de seção (24 a 28 px). */
+  .page-title {
+    @apply font-display font-semibold text-brand-text text-display-lg sm:text-display-xl;
+  }
+  .section-title {
+    @apply font-display font-semibold text-brand-text text-display-sm sm:text-display-md;
+  }
+
+  /* Rótulo de campo. */
+  .field-label {
+    @apply block text-xs font-medium text-brand-text-muted uppercase tracking-wide mb-2;
+  }
+
+  /* Filete dourado: só linha, nunca texto. */
+  .gold-rule {
+    @apply block h-px w-12 bg-brand-gold;
+  }
+
+  /* Estado vazio. */
+  .empty-state {
+    @apply flex flex-col items-center justify-center text-center gap-3
+           py-10 px-4 rounded-brand border border-dashed border-brand-border-strong;
+  }
+
+  .empty-state-icon {
+    @apply w-11 h-11 rounded-full bg-brand-surface-muted text-brand-text-muted
+           flex items-center justify-center flex-shrink-0;
+  }
+
+  .input {
+    @apply w-full border border-brand-border-strong rounded-brand bg-brand-surface
+           px-4 py-3 text-sm text-brand-text placeholder:text-brand-text-light
+           focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary
+           transition-colors duration-150;
+  }
+
+  .select {
+    @apply w-full border border-brand-border-strong rounded-brand bg-brand-surface
+           px-4 py-3 text-sm text-brand-text
+           focus:outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary
+           transition-colors duration-150 cursor-pointer appearance-none;
+  }
+
+  /* Estado de conexão: verde da marca (ok), grafite claro (desconectado), dourado (atenção). */
+  .badge-connected {
+    @apply inline-flex items-center gap-1.5 text-xs font-medium
+           bg-brand-primary/10 text-brand-primary border border-brand-primary/30
+           px-2.5 py-1 rounded-brand;
+  }
+
+  .badge-disconnected {
+    @apply inline-flex items-center gap-1.5 text-xs font-medium
+           bg-brand-surface-muted text-brand-text-muted border border-brand-border
+           px-2.5 py-1 rounded-brand;
+  }
+
+  .badge-expired {
+    @apply inline-flex items-center gap-1.5 text-xs font-medium
+           bg-brand-surface-muted text-brand-text border border-brand-gold
+           px-2.5 py-1 rounded-brand;
+  }
+}

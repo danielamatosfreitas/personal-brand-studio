@@ -1,0 +1,86 @@
+{
+  "versao": 1,
+  "gerado_em": "2026-10-20T12:00:00-03:00",
+  "fonte": "dados de exemplo (textos do Textos_dos_Cards.txt)",
+  "itens": [
+    {
+      "id": "2026-10-22-stories-enquete",
+      "data": "2026-10-22",
+      "hora": null,
+      "rede": "stories",
+      "codigo": null,
+      "titulo": "Enquete da escala 6x1",
+      "formato": "stories",
+      "cor": null,
+      "status": "Texto aprovado",
+      "roteiro": "Enquete: \"Sua equipe trabalha de segunda a sábado?\" (opções: Sim / Não)"
+    },
+    {
+      "id": "2026-10-23-stories-texto",
+      "data": "2026-10-23",
+      "hora": null,
+      "rede": "stories",
+      "codigo": null,
+      "titulo": "O limite de dezembro",
+      "formato": "stories",
+      "cor": null,
+      "status": "Texto aprovado",
+      "legenda": "Em dezembro, o limite é de 42 horas por semana, mas só a convenção da categoria permite fazer isso em cinco dias. Sem ela, são 40 horas desde dezembro. No fim de 2027, 40 horas para todos."
+    },
+    {
+      "id": "2026-10-26-pt106-linkedin-pessoal",
+      "data": "2026-10-26",
+      "hora": "09:00",
+      "rede": "linkedin_pessoal",
+      "codigo": "pt106",
+      "titulo": "A conta do fim da 6x1",
+      "formato": "texto",
+      "cor": null,
+      "status": "Texto aprovado",
+      "legenda": "Fiz a conta do fim da escala 6x1 para uma loja com cinco vendedoras, de segunda a sábado, 44 horas por semana, salário de R$ 2.500, no Simples Nacional. São números de exemplo, comuns no comércio.\n\nA mudança vem em duas etapas, e cada uma pede uma decisão diferente.\n\nEm dezembro, o limite semanal passa a ser de 42 horas, mas fazer isso em cinco dias depende da convenção da categoria. Se a convenção ou um acordo coletivo permitir cerca de 8h24 por dia, são 10 horas a menos por semana, e dá para absorver ajustando o horário de atendimento nos períodos de menor movimento. Sem essa previsão, vale o limite de 8 horas por dia, e a perda chega a 20 horas já em dezembro.\n\nNo fim de 2027, o limite cai para 40 horas, e faltam 20 horas por semana em qualquer cenário. Pagar hora extra para cobrir custaria cerca de R$ 2.443,74 por mês. Contratar uma pessoa por 20 horas semanais custaria cerca de R$ 1.612,50, e mesmo somando o custo da contratação, passa a compensar a partir do quarto mês. Por isso, a primeira tarefa desta semana é pegar a convenção coletiva da categoria e conferir o que ela diz sobre a jornada diária.\n\nPara fazer essa conta com a equipe da sua empresa, montei uma calculadora gratuita. O link está no primeiro comentário. É uma estimativa pela regra geral e não substitui o contador nem a convenção da categoria.\n\nNa sua empresa, a conta de 2027 já foi feita?\n\n#Escala6x1 #PequenasEmpresas #GestãoDePessoas",
+      "primeiro_comentario": "Calculadora escala 6x1, gratuita: https://capitalhumanointelligence.com/escala-6x1?utm_source=linkedin&utm_medium=post&utm_campaign=calculadora-6x1"
+    },
+    {
+      "id": "2026-10-27-pt105-instagram",
+      "data": "2026-10-27",
+      "hora": "15:00",
+      "rede": "instagram",
+      "codigo": "pt105",
+      "titulo": "A conta do fim da 6x1 numa loja pequena",
+      "formato": "carrossel",
+      "slides": 8,
+      "cor": "verde",
+      "status": "Card aprovado",
+      "legenda": "O fim da escala 6x1 foi promulgado em 16 de outubro, e a dúvida de muitos donos de comércio é se vão precisar contratar. A resposta depende da etapa e da convenção da categoria: com uma convenção que permita 8h24 por dia, o ajuste de dezembro costuma caber no horário de atendimento; sem ela, a conta aperta já em dezembro.\n\nO carrossel mostra o exemplo de uma loja com cinco vendedoras. Para fazer a conta com a sua equipe, a calculadora gratuita da Capital Humano Intelligence está no link da bio.\n\nNa sua empresa, quantas pessoas trabalham hoje de segunda a sábado?\n\n#gestaodepessoas #pequenasempresas #escala6x1",
+      "notas": "Tarefa da Dani (27/10, antes das 15h): trocar o link da bio do Instagram para a calculadora."
+    },
+    {
+      "id": "2026-10-27-pt105-facebook",
+      "data": "2026-10-27",
+      "hora": "15:00",
+      "rede": "facebook",
+      "codigo": "pt105",
+      "titulo": "A conta do fim da 6x1 numa loja pequena",
+      "formato": "carrossel",
+      "slides": 8,
+      "cor": "verde",
+      "status": "Card aprovado",
+      "legenda": "O fim da escala 6x1 foi promulgado em 16 de outubro, e a dúvida de muitos donos de comércio é se vão precisar contratar. A resposta depende da etapa e da convenção da categoria: com uma convenção que permita 8h24 por dia, o ajuste de dezembro costuma caber no horário de atendimento; sem ela, a conta aperta já em dezembro.\n\nO carrossel mostra o exemplo de uma loja com cinco vendedoras. Para fazer a conta com a sua equipe, a calculadora gratuita da Capital Humano Intelligence está no link da bio.\n\nNa sua empresa, quantas pessoas trabalham hoje de segunda a sábado?\n\n#gestaodepessoas #pequenasempresas #escala6x1"
+    },
+    {
+      "id": "2026-10-28-pt105-linkedin-empresa",
+      "data": "2026-10-28",
+      "hora": "12:00",
+      "rede": "linkedin_empresa",
+      "codigo": "pt105",
+      "titulo": "A conta do fim da 6x1 numa loja pequena",
+      "formato": "pdf",
+      "slides": 8,
+      "cor": "verde",
+      "status": "Card aprovado",
+      "legenda": "A emenda que acaba com a escala 6x1 define duas etapas: 42 horas semanais a partir de dezembro de 2026 e 40 horas por volta do fim de 2027, sem redução de salário. Para quem tem comércio, cada etapa pede uma decisão diferente. O tamanho do ajuste em dezembro depende do que a convenção da categoria prevê para a jornada diária.\n\nO documento traz um exemplo com números: uma loja com cinco vendedoras, o que muda em cada etapa e quando contratar passa a custar menos do que pagar hora extra.\n\nA Capital Humano Intelligence criou uma calculadora gratuita para fazer essa conta com a equipe de cada empresa. O link está no primeiro comentário.\n\n#JornadaDeTrabalho #LegislaçãoTrabalhista #GestãoEstratégica",
+      "primeiro_comentario": "Calculadora escala 6x1, gratuita: https://capitalhumanointelligence.com/escala-6x1?utm_source=linkedin&utm_medium=empresa&utm_campaign=calculadora-6x1",
+      "titulo_documento": "A conta do fim da 6x1 numa loja pequena"
+    }
+  ]
+}

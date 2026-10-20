@@ -1,0 +1,20 @@
+fastapi==0.103.2 
+uvicorn==0.23.2 
+sqlalchemy==2.0.21 
+asyncpg==0.28.0 
+pydantic==2.4.2 
+pydantic-settings==2.0.3 
+python-dotenv==1.0.0 
+httpx==0.25.0 
+cryptography==41.0.4 
+python-jose==3.3.0 
+passlib==1.7.4 
+bcrypt==4.0.1
+itsdangerous==2.1.2
+email-validator==2.1.0
+Pillow==10.4.0
+python-multipart==0.0.9
+# 1.35: sem os checksums novos por padrão (1.36+), que alguns S3 compatíveis recusam
+boto3==1.35.36
+# Painel Ver dos Agendados: primeira página do PDF em imagem (19/10)
+pypdfium2==4.30.0

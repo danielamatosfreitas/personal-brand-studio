@@ -1,0 +1,4 @@
+# Só para rodar os testes simulados (pytest tests); não vai para a Railway.
+pytest==8.3.3
+pytest-asyncio==0.24.0
+respx==0.21.1
