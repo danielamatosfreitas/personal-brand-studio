@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "regressao-visual": "node scripts/regressao-visual/run.mjs",
-    "test": "node --test tests/publicar-redes.test.mjs tests/calendario-espelho.test.mjs"
+    "test": "node --test tests/publicar-redes.test.mjs tests/calendario-espelho.test.mjs tests/texto-curto.test.mjs"
   },
   "dependencies": {
     "html2canvas": "^1.4.1",

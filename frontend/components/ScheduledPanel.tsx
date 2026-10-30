@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { postsApi, type PostResponse, type PreviaPost } from '../services/api'
+import { previaPrimeiraLinha } from '../lib/textoCurto'
 import { IconLinkedIn, IconInstagram, IconFacebook, IconSpinner, IconCalendar } from './ui'
 import { PainelVer, FormEditar } from './ScheduledPostView'
 
@@ -121,7 +122,7 @@ export function ScheduledPostsPanel({ refreshKey }: ScheduledPostsPanelProps) {
                       : 'Sem agendamento'}
                   </span>
                 </div>
-                <p className="text-sm text-brand-text-muted line-clamp-2 break-words">{post.content.split('\n')[0].slice(0, 80)}</p>
+                <p className="text-sm text-brand-text-muted line-clamp-2 break-words">{previaPrimeiraLinha(post.content, 80)}</p>
               </div>
               <div className="flex gap-2 flex-shrink-0">
                 <button onClick={() => abre(post.id, 'ver')} aria-expanded={aberto?.id === post.id && aberto.modo === 'ver'}
@@ -169,7 +170,7 @@ export function ScheduledPostsPanel({ refreshKey }: ScheduledPostsPanelProps) {
                     {post.scheduled_at
                       ? new Date(post.scheduled_at).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' })
                       : 'Sem agendamento'}
-                    {' · '}{post.content.split('\n')[0].slice(0, 60)}
+                    {' · '}{previaPrimeiraLinha(post.content, 60)}
                   </span>
                 </div>
                 <p className="text-sm text-red-700 break-words" role="status">

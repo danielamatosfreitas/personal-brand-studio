@@ -6,12 +6,12 @@ import { postsApi, type PostResponse } from '../../services/api'
 import { useApp } from '../../components/AppShell'
 import { useConnectionStatus } from '../../components/ConnectionsPanel'
 import { IconArrow, IconLinkedIn, IconInstagram, IconSpinner } from '../../components/ui'
+import { previaPrimeiraLinha } from '../../lib/textoCurto'
 
 const WEEK_MS = 7 * 24 * 60 * 60 * 1000
 
 function firstLine(content: string): string {
-  const line = content.split('\n').map(l => l.trim()).find(Boolean) || ''
-  return line.length > 90 ? `${line.slice(0, 89)}…` : line
+  return previaPrimeiraLinha(content, 89)
 }
 
 function formatDay(iso: string): { day: string; time: string } {

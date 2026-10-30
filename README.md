@@ -56,10 +56,11 @@ flowchart LR
 
 ## Como ver a demonstração
 
-Para ver o app funcionando sem banco, sem backend e sem senha, com dados fictícios:
+Para ver o app funcionando sem banco, sem backend e sem senha, com dados fictícios. Precisa de Node.js 20 ou mais novo. A partir de um clone novo, rode na ordem (o `npm install`, dentro de `frontend`, vem antes do `npm run demo` e só é preciso na primeira vez):
 
 ```bash
-cd frontend
+git clone https://github.com/danielamatosfreitas/personal-brand-studio.git
+cd personal-brand-studio/frontend
 npm install
 npm run demo
 ```
@@ -149,7 +150,16 @@ The architecture diagram is in the Portuguese section above.
 
 ## Demo
 
-To see the app running with fictitious data, without a database, a backend or a password: `cd frontend`, `npm install`, `npm run demo`, then open `http://127.0.0.1:3210`. A sample API (`frontend/demo/api-demo.mjs`) answers in place of the backend; publishing, scheduling and connecting accounts are only simulated and nothing reaches the social networks. `Ctrl+C` stops everything.
+To see the app running with fictitious data, without a database, a backend or a password (Node.js 20 or newer). From a fresh clone, run in this order (`npm install`, inside `frontend`, comes before `npm run demo` and is only needed the first time):
+
+```bash
+git clone https://github.com/danielamatosfreitas/personal-brand-studio.git
+cd personal-brand-studio/frontend
+npm install
+npm run demo
+```
+
+Then open `http://127.0.0.1:3210`. A sample API (`frontend/demo/api-demo.mjs`) answers in place of the backend; publishing, scheduling and connecting accounts are only simulated and nothing reaches the social networks. `Ctrl+C` stops everything.
 
 ## Running
 

@@ -276,7 +276,7 @@ export function CreationStudio({ onResult, onToast }: StudioProps) {
         <textarea
           value={topic}
           onChange={e => setTopic(e.target.value)}
-          placeholder="Ex: turnover alto como sintoma de cultura organizacional fraca"
+          placeholder="Ex.: turnover alto como sintoma de cultura organizacional fraca"
           rows={4}
           className="input resize-none text-base"
           onKeyDown={e => {
