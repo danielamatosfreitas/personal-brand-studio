@@ -12,7 +12,7 @@
  */
 
 import { useEffect, useState, type FormEvent, type ReactNode } from 'react'
-import { getAccessToken, setAccessToken, clearAccessToken, verifyAccessToken } from '../services/api'
+import { getAccessToken, setAccessToken, clearAccessToken, verifyAccessToken, MODO_DEMO } from '../services/api'
 import { BrandLogo } from './ui'
 
 type GateStatus = 'checking' | 'authed' | 'locked'
@@ -24,6 +24,11 @@ export default function AuthGate({ children }: { children: ReactNode }) {
   const [verifying, setVerifying] = useState(false)
 
   useEffect(() => {
+    // Demonstração (npm run demo): sem senha, a API de exemplo responde tudo.
+    if (MODO_DEMO) {
+      setStatus('authed')
+      return
+    }
     const stored = getAccessToken()
     if (!stored) {
       setStatus('locked')
@@ -73,7 +78,7 @@ export default function AuthGate({ children }: { children: ReactNode }) {
           </div>
           <div>
             <h1 className="font-display font-semibold text-display-lg md:text-display-xl text-brand-background">
-              Personal Brand OS
+              Personal Brand Studio
             </h1>
             <span className="block h-px w-14 bg-brand-gold mt-5"/>
             <p className="font-display text-display-sm text-brand-background/90 mt-5 max-w-sm">

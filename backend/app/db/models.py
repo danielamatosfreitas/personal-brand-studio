@@ -158,9 +158,9 @@ class Post(Base):
 class PostExtra(Base):
     """
     Dados de um post (19/10): título do documento (PDF no LinkedIn; nunca
-    vem da legenda), primeiro comentário (a Dani faz à mão depois que o post
+    vem da legenda), primeiro comentário (feito à mão depois que o post
     sai) e código da peça. Ficam numa tabela à parte para a tabela posts
-    (lida pelo agendador) não mudar. Criada pela Dani, com o SQL aprovado:
+    (lida pelo agendador) não mudar. Criada pela dona da conta, com o SQL aprovado:
     CREATE TABLE IF NOT EXISTS post_extras (
         post_id UUID PRIMARY KEY REFERENCES posts(id) ON DELETE CASCADE,
         titulo_documento VARCHAR(200),

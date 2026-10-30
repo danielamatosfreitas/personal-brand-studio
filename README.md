@@ -54,6 +54,18 @@ flowchart LR
 * **Testes:** pytest com respx (chamadas externas simuladas) e o executor nativo do Node.js (`node --test`).
 * **Hospedagem usada no app real:** Netlify (frontend) e Railway (backend e banco); qualquer serviço equivalente funciona.
 
+## Como ver a demonstração
+
+Para ver o app funcionando sem banco, sem backend e sem senha, com dados fictícios:
+
+```bash
+cd frontend
+npm install
+npm run demo
+```
+
+Abra `http://127.0.0.1:3210`. Você vai ver o painel com as contas de exemplo já conectadas, posts agendados para os próximos dias, o calendário da semana e o estúdio de criação gerando cards de verdade. Uma API de exemplo (`frontend/demo/api-demo.mjs`) responde no lugar do backend: publicar, agendar e conectar contas só simulam a resposta, e nada é enviado às redes. `Ctrl+C` encerra tudo. Se as portas 3210 ou 8710 estiverem ocupadas, escolha outras com `DEMO_PORTA_WEB` e `DEMO_PORTA_API`.
+
 ## Como rodar
 
 ### Backend
@@ -134,6 +146,10 @@ The architecture diagram is in the Portuguese section above.
 * **Backend:** Python 3.11, FastAPI, async SQLAlchemy 2 (asyncpg), PostgreSQL, Pydantic, httpx, cryptography (Fernet), boto3, Pillow, pypdfium2.
 * **Tests:** pytest with respx (mocked external calls) and the built in Node.js test runner.
 * **Hosting used by the live app:** Netlify (frontend) and Railway (backend and database).
+
+## Demo
+
+To see the app running with fictitious data, without a database, a backend or a password: `cd frontend`, `npm install`, `npm run demo`, then open `http://127.0.0.1:3210`. A sample API (`frontend/demo/api-demo.mjs`) answers in place of the backend; publishing, scheduling and connecting accounts are only simulated and nothing reaches the social networks. `Ctrl+C` stops everything.
 
 ## Running
 

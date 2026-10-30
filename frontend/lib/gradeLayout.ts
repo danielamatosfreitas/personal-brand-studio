@@ -1,7 +1,7 @@
 /**
  * lib/gradeLayout.ts
  *
- * "Grade editorial" (aprovada pela Dani em 13/10, em TESTE): layout dos cards
+ * "Grade editorial" (aprovada em 13/10, em TESTE): layout dos cards
  * em 1080x1350 com tudo alinhado em cima. Só entra quando a API recebe o
  * formato "grade" (no lote, LOTE_ESTILO=grade); sem isso, o motor de sempre
  * (lib/cardLayout.ts, layoutCard) desenha tudo como antes.

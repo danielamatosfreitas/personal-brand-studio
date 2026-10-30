@@ -127,7 +127,7 @@ function Shell({ children }: { children: ReactNode }) {
         <aside className="hidden md:flex fixed inset-y-0 left-0 w-[272px] flex-col bg-brand-primary px-5 py-8 z-20">
           <Link href="/" className="block px-4 mb-8">
             <BrandLogo size={48}/>
-            <span className="block font-display font-semibold text-brand-background text-[1.6rem] leading-tight mt-4 whitespace-nowrap">Personal Brand OS</span>
+            <span className="block font-display font-semibold text-brand-background text-[1.35rem] leading-tight mt-4 whitespace-nowrap">Personal Brand Studio</span>
             <span className="block text-xs text-brand-background/70 mt-1">Capital Humano Intelligence</span>
           </Link>
           <span className="block h-px bg-brand-gold/70 mx-4 mb-6"/>
@@ -142,7 +142,7 @@ function Shell({ children }: { children: ReactNode }) {
           <div className="flex items-center justify-between px-5 h-16">
             <Link href="/" className="flex items-center gap-3 min-w-0">
               <BrandLogo size={36}/>
-              <span className="font-display font-semibold text-brand-background text-xl truncate">Personal Brand OS</span>
+              <span className="font-display font-semibold text-brand-background text-xl truncate">Personal Brand Studio</span>
             </Link>
             <button onClick={() => setMenuOpen(o => !o)}
               aria-expanded={menuOpen} aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}

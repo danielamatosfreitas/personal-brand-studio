@@ -96,7 +96,7 @@ def escolhe_pagina(paginas: list[dict]) -> dict:
     return pagina
 
 
-# Permissões mínimas, com o nome que aparece para a Dani.
+# Permissões mínimas, com o nome que aparece para quem conecta a conta.
 PERMISSOES_MINIMAS = {
     "pages_show_list": "ver as suas Páginas",
     "pages_read_engagement": "ler o conteúdo da Página",

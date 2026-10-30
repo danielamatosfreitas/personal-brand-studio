@@ -1,7 +1,7 @@
 """
 app/services/calendario_service.py
 Espelho do Calendário (20/10): cópia só de leitura do calendário oficial (o
-arquivo HTML da pasta MARKETING, mantido pela sessão Calendário), para a Dani
+arquivo HTML da pasta MARKETING, mantido pela sessão Calendário), para a dona da conta
 conferir os textos pelo celular. O app nunca edita o calendário.
 
 O espelho é um arquivo JSON (formato em docs/espelho-calendario.md) guardado

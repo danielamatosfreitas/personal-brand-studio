@@ -68,7 +68,7 @@ async def publish_to_linkedin(
     Publica no LinkedIn -- no perfil pessoal ou numa Página de empresa que a
     usuária administra, dependendo de post.linkedin_organization_urn (null =
     perfil pessoal). Se o post tiver um PDF em media_urls (carrossel
-    exportado do Personal Brand OS), publica como documento via Documents
+    exportado do Personal Brand Studio), publica como documento via Documents
     API + Posts API. Se tiver um vídeo (MP4/MOV), publica via Videos API
     (upload em partes + espera processar). Se tiver uma imagem (JPG/PNG --
     ex: upload feito em "Publicar mídia pronta"), publica com a imagem

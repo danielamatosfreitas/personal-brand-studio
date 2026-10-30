@@ -1,6 +1,6 @@
 """
 app/services/storage_service.py
-Mídia do Personal Brand OS num bucket compatível com S3.
+Mídia do Personal Brand Studio num bucket compatível com S3.
 
 Hoje: Railway Storage Bucket (privado). Trocar para Cloudflare R2 ou outro
 serviço S3 é só mudar as variáveis S3_* (ver app/core/config.py); o código é o

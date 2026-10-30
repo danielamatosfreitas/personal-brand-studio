@@ -35,7 +35,7 @@ export const STORY = {
 const CENTER_X = STORY.width / 2
 const CONTENT_W = STORY.right - STORY.left // 900
 
-/** Área da figurinha de link: fica vazia (a Dani cola a figurinha ali). */
+/** Área da figurinha de link: fica vazia (a figurinha é colada ali à mão). */
 export const LINK_RESERVE = { w: 560, h: 112, y: STORY.uiBottom - 24 - 112 } // 1444..1556
 export const LINK_RESERVE_X = Math.round(STORY.width / 2 - LINK_RESERVE.w / 2)
 

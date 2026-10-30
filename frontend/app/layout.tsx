@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Personal Brand OS | Capital Humano Intelligence',
+  title: 'Personal Brand Studio | Capital Humano Intelligence',
   description: 'Sistema de gestão de conteúdo estratégico de Daniela Matos',
 }
 

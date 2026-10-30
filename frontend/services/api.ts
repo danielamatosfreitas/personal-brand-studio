@@ -1,17 +1,24 @@
 /**
  * services/api.ts
- * Conector central para o backend Personal Brand OS (Railway/FastAPI).
+ * Conector central para o backend Personal Brand Studio (FastAPI).
  * Todas as chamadas à API passam por aqui.
  */
 
 import type { EspelhoCalendario } from '../lib/calendarioEspelho'
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+/** Modo de demonstração (NEXT_PUBLIC_DEMO=1, ligado só pelo npm run demo): as
+ *  chamadas vão para a API de exemplo (demo/api-demo.mjs) e o AuthGate deixa
+ *  entrar sem senha. Desligado (padrão), nada muda. */
+export const MODO_DEMO = process.env.NEXT_PUBLIC_DEMO === '1'
+
+const API_URL = MODO_DEMO
+  ? (process.env.NEXT_PUBLIC_DEMO_API_URL || 'http://127.0.0.1:8710')
+  : (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000')
 
 // ── Trava de acesso (senha única) ───────────────────────────────────────────────
 // A senha NUNCA fica embutida no build do frontend (isso vazaria no bundle
 // público, visível pra qualquer um). Ela só existe: (1) na cabeça de quem
-// souber, (2) como variável de ambiente no Railway (que valida de verdade),
+// souber, (2) como variável de ambiente no servidor (que valida de verdade),
 // e (3) no localStorage do navegador de quem já digitou ela e passou.
 
 const ACCESS_TOKEN_KEY = 'pbos_access_token'

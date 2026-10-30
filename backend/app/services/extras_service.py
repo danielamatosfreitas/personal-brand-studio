@@ -3,7 +3,7 @@ app/services/extras_service.py
 Dados extras de um post (19/10), na tabela post_extras: título do documento
 (PDF no LinkedIn), primeiro comentário (feito à mão) e código da peça.
 
-A tabela é criada pela Dani, por SQL aprovado. Enquanto ela não existe, a
+A tabela é criada pela dona da conta, por SQL aprovado. Enquanto ela não existe, a
 leitura devolve "sem extras" e a gravação é recusada com aviso; a tabela
 posts, lida pelo agendador, não depende dela.
 """

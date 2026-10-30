@@ -1,6 +1,6 @@
 # Espelho do Calendário no app (especificação, 20/10/2026)
 
-Página **Calendário** do Personal Brand OS: cópia só de leitura do calendário oficial, para a Dani conferir os textos pelo celular.
+Página **Calendário** do Personal Brand Studio: cópia só de leitura do calendário oficial, para conferir os textos pelo celular.
 
 ## Princípio
 
@@ -83,7 +83,7 @@ Exemplo completo: `docs/exemplo-calendario-espelho.json` (textos do `Textos_dos_
 | `primeiro_comentario` | não | texto completo |
 | `titulo_documento` | não | título do documento (PDF no LinkedIn); até 300 caracteres |
 | `roteiro` | não | roteiro do Reel ou dos Stories |
-| `notas` | não | observações para a Dani (ex.: tarefa antes de publicar) |
+| `notas` | não | observações internas (ex.: tarefa antes de publicar) |
 
 Regras:
 

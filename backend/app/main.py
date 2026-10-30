@@ -1,6 +1,6 @@
 """
 app/main.py
-Ponto de entrada da aplicação FastAPI — Personal Brand OS.
+Ponto de entrada da aplicação FastAPI do Personal Brand Studio.
 Fase 2.1: Motor de IA adicionado.
 """
 import asyncio
@@ -21,7 +21,7 @@ for _nome in ("httpx", "httpcore"):
     logging.getLogger(_nome).setLevel(logging.WARNING)
 
 app = FastAPI(
-    title="Personal Brand OS",
+    title="Personal Brand Studio",
     description="Sistema de marca pessoal: criação, agendamento e publicação de conteúdo",
     version="2.0.0",
 )
@@ -56,7 +56,7 @@ app.include_router(calendario.router, prefix="/api/v1")
 async def health():
     return {
         "status": "ok",
-        "app": "Personal Brand OS",
+        "app": "Personal Brand Studio",
         "phase": "2",
         "features": ["oauth", "posts", "ai_generation"],
     }
@@ -72,7 +72,7 @@ async def on_startup():
 
     if settings.APP_ENV == "development":
         # post_extras (19/10) fica de fora: no banco de produção ela é criada
-        # pela Dani, com o SQL aprovado; enquanto não existe, o app funciona
+        # pela dona da conta, com o SQL aprovado; enquanto não existe, o app funciona
         # sem código da peça e primeiro comentário.
         tabelas = [t for t in Base.metadata.sorted_tables if t.name != "post_extras"]
         async with engine.begin() as conn:
