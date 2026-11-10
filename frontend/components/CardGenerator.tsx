@@ -377,7 +377,7 @@ export default function CardGenerator({
       setFinalBlobs(blobs)
       setFinalUrls(blobs.map(b => URL.createObjectURL(b)))
       setFinalFingerprint(fingerprintAtGeneration)
-      onToast?.('Versão final gerada. Conferida, agora dá pra publicar/baixar.', 'success')
+      onToast?.('Versão final gerada. Conferida, agora dá para publicar/baixar.', 'success')
     } catch (e: unknown) {
       const err = e as Error
       onToast?.(err.message || 'Falha ao gerar a versão final.', 'error')
@@ -661,7 +661,7 @@ export default function CardGenerator({
       {slides.length > 1 && (
         <p className="text-xs text-brand-text-muted mt-3">
           {platform === 'linkedin'
-            ? 'Baixe os PNGs pra conferir, ou publique direto: a ferramenta monta o PDF e posta como documento no seu LinkedIn.'
+            ? 'Baixe os PNGs para conferir, ou publique direto: a ferramenta monta o PDF e posta como documento no seu LinkedIn.'
             : 'Cada slide baixa como PNG separado, em ordem. Monte o carrossel no app do Instagram fazendo upload das imagens na sequência numerada.'}
         </p>
       )}

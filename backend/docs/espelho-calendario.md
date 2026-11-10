@@ -14,7 +14,7 @@ Página **Calendário** do Personal Brand Studio: cópia só de leitura do calen
 ## Como a sessão Calendário envia
 
 1. Gerar o arquivo `calendario-espelho.json` no formato abaixo, em UTF-8.
-2. Rodar, na pasta `C:\projetos\PERSONALBRAND`:
+2. Rodar, na pasta `backend`:
 
    ```
    python scripts/enviar_espelho_calendario.py "C:\caminho\calendario-espelho.json"
@@ -103,14 +103,14 @@ Regras:
 
 ## Chave de sincronização (CALENDARIO_SYNC_TOKEN)
 
-- A chave fica no arquivo local `C:\projetos\PERSONALBRAND\.sync_token`, ignorado pelo Git, e na variável `CALENDARIO_SYNC_TOKEN` do serviço `personal-brand-os` no Railway.
+- A chave fica no arquivo local `.sync_token` da pasta `backend`, ignorado pelo Git, e na variável `CALENDARIO_SYNC_TOKEN` do serviço do backend no Railway.
 - Sem a variável no Railway, o envio fica fechado (o servidor responde que o envio ainda não foi configurado).
 - A página do app lê o espelho com a senha do app, como as outras telas; a chave de sincronização só serve para enviar.
 - Para trocar a chave: gerar um valor novo no `.sync_token` e atualizar a variável no Railway com o mesmo valor.
 
 Passo a passo para criar a variável no Railway:
 
-1. Abrir as variáveis do serviço: https://railway.com/project/12baae2a-3022-4648-baa3-9693eff00d5e/service/5efaf040-b95a-4eab-8ed4-fda885b7eaac/variables?environmentId=70bc84b9-0e5c-415e-ad0b-ab5025770f29
-2. No Explorador do Windows, abrir `C:\projetos\PERSONALBRAND`, clicar com o botão direito em `.sync_token`, escolher "Abrir com" e "Bloco de Notas". Selecionar tudo (Ctrl+A) e copiar (Ctrl+C). Fechar o Bloco de Notas sem salvar.
+1. Abrir as variáveis do serviço do backend no painel do Railway.
+2. Abrir o arquivo `.sync_token` da pasta `backend` num editor de texto, selecionar tudo e copiar. Fechar o editor sem salvar.
 3. No Railway, clicar em "New Variable". Em nome, escrever `CALENDARIO_SYNC_TOKEN`; em valor, colar (Ctrl+V). Clicar em "Add".
 4. Clicar em "Deploy" (ou "Apply changes") para o serviço reiniciar com a variável. Evitar perto dos horários de posts agendados (9h, 12h e 15h).

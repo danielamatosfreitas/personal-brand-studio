@@ -102,7 +102,7 @@ Abra `http://localhost:3000` e entre com a senha definida em `APP_ACCESS_TOKEN` 
 Nenhum teste fala com o LinkedIn, a Meta, o banco ou o bucket de verdade.
 
 * **Backend (141 testes):** `cd backend`, `pip install -r requirements-dev.txt` e `pytest`. As chamadas às redes são simuladas com respx, e o `tests/conftest.py` define valores de teste para as variáveis de ambiente. Cobrem OAuth e segurança (estado, criptografia dos tokens), publicação no LinkedIn com documento, Instagram, Facebook (trava da Página certa, permissões), agendamento, edição sem cancelar, armazenamento de mídia e o espelho do Calendário.
-* **Frontend (11 testes):** `cd frontend` e `npm test`. Cobrem a publicação em duas redes (falha numa não cancela a outra) e o espelho do Calendário.
+* **Frontend (17 testes):** `cd frontend` e `npm test`. Cobrem a publicação em duas redes (falha numa não cancela a outra) e o espelho do Calendário.
 * **Regressão visual (opcional):** `npm run regressao-visual`, com o servidor rodando, compara os cards renderizados no servidor e no navegador e trava fonte faltando.
 
 ## Antes de usar: crie os seus próprios apps
@@ -172,7 +172,7 @@ Frontend (Node.js 20 or newer): `cd frontend`, `npm install`, copy `.env.example
 No test talks to LinkedIn, Meta, the database or the real bucket.
 
 * **Backend (141 tests):** `cd backend`, `pip install -r requirements-dev.txt`, `pytest`. External calls are mocked with respx and `tests/conftest.py` sets test values for the environment variables. They cover OAuth and security, LinkedIn document publishing, Instagram, Facebook (right Page lock, permissions), scheduling, editing without cancelling, media storage and the calendar mirror.
-* **Frontend (11 tests):** `cd frontend`, `npm test`.
+* **Frontend (17 tests):** `cd frontend`, `npm test`.
 
 ## Before using it: create your own apps
 
