@@ -39,3 +39,6 @@ test-output/
 
 # config local do Claude Code (não é parte do projeto)
 .claude/
+
+# gerado de novo pelo next dev a cada execução (Next.js 16)
+AGENTS.md

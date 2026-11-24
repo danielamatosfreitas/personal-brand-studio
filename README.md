@@ -44,19 +44,19 @@ flowchart LR
   B -->|OAuth e publicação| FB[Facebook]
 ```
 
-* `frontend/`: Next.js 14 (App Router), React, TypeScript e Tailwind. Gera os cards no servidor com `next/og` (Satori e Resvg) e os PDFs com `pdf-lib`.
+* `frontend/`: Next.js 16 (App Router), React, TypeScript e Tailwind. Gera os cards no servidor com `next/og` (Satori e Resvg) e os PDFs com `pdf-lib`.
 * `backend/`: Python 3.11, FastAPI, SQLAlchemy assíncrono e PostgreSQL. OAuth com LinkedIn, Instagram e Facebook, agendador de publicações, armazenamento de mídia em bucket S3 e integração com a API de IA.
 
 ## Tecnologias
 
-* **Frontend:** Next.js 14, React 18, TypeScript, Tailwind CSS, next/og, opentype.js, pdf-lib.
+* **Frontend:** Next.js 16, React 18, TypeScript, Tailwind CSS, next/og, opentype.js, pdf-lib.
 * **Backend:** FastAPI, SQLAlchemy 2 (asyncpg), Pydantic, httpx, cryptography (Fernet), boto3, Pillow, pypdfium2.
 * **Testes:** pytest com respx (chamadas externas simuladas) e o executor nativo do Node.js (`node --test`).
 * **Hospedagem usada no app real:** Netlify (frontend) e Railway (backend e banco); qualquer serviço equivalente funciona.
 
 ## Como ver a demonstração
 
-Para ver o app funcionando sem banco, sem backend e sem senha, com dados fictícios. Precisa de Node.js 20 ou mais novo. A partir de um clone novo, rode na ordem (o `npm install`, dentro de `frontend`, vem antes do `npm run demo` e só é preciso na primeira vez):
+Para ver o app funcionando sem banco, sem backend e sem senha, com dados fictícios. Precisa de Node.js 20.9 ou mais novo. A partir de um clone novo, rode na ordem (o `npm install`, dentro de `frontend`, vem antes do `npm run demo` e só é preciso na primeira vez):
 
 ```bash
 git clone https://github.com/danielamatosfreitas/personal-brand-studio.git
@@ -86,7 +86,7 @@ No Linux ou no Mac, ative o ambiente com `source .venv/bin/activate` e copie o a
 
 ### Frontend
 
-Precisa de Node.js 20 ou mais novo.
+Precisa de Node.js 20.9 ou mais novo.
 
 ```bash
 cd frontend
@@ -143,14 +143,14 @@ The architecture diagram is in the Portuguese section above.
 
 ## Tech stack
 
-* **Frontend:** Next.js 14, React 18, TypeScript, Tailwind CSS, next/og, opentype.js, pdf-lib.
+* **Frontend:** Next.js 16, React 18, TypeScript, Tailwind CSS, next/og, opentype.js, pdf-lib.
 * **Backend:** Python 3.11, FastAPI, async SQLAlchemy 2 (asyncpg), PostgreSQL, Pydantic, httpx, cryptography (Fernet), boto3, Pillow, pypdfium2.
 * **Tests:** pytest with respx (mocked external calls) and the built in Node.js test runner.
 * **Hosting used by the live app:** Netlify (frontend) and Railway (backend and database).
 
 ## Demo
 
-To see the app running with fictitious data, without a database, a backend or a password (Node.js 20 or newer). From a fresh clone, run in this order (`npm install`, inside `frontend`, comes before `npm run demo` and is only needed the first time):
+To see the app running with fictitious data, without a database, a backend or a password (Node.js 20.9 or newer). From a fresh clone, run in this order (`npm install`, inside `frontend`, comes before `npm run demo` and is only needed the first time):
 
 ```bash
 git clone https://github.com/danielamatosfreitas/personal-brand-studio.git
@@ -165,7 +165,7 @@ Then open `http://127.0.0.1:3210`. A sample API (`frontend/demo/api-demo.mjs`) a
 
 Backend (Python 3.11 and PostgreSQL): `cd backend`, create a virtual environment, `pip install -r requirements.txt`, copy `.env.example` to `.env`, fill in your values and run `uvicorn app.main:app --reload --port 8000`. The AI persona text lives in `config/persona.txt` (copy it from `config/persona.example.txt`), which is not committed.
 
-Frontend (Node.js 20 or newer): `cd frontend`, `npm install`, copy `.env.example` to `.env.local` and run `npm run dev`. Open `http://localhost:3000` and sign in with the `APP_ACCESS_TOKEN` defined in the backend.
+Frontend (Node.js 20.9 or newer): `cd frontend`, `npm install`, copy `.env.example` to `.env.local` and run `npm run dev`. Open `http://localhost:3000` and sign in with the `APP_ACCESS_TOKEN` defined in the backend.
 
 ## Tests
 
