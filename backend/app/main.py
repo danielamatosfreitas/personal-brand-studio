@@ -72,7 +72,7 @@ async def on_startup():
 
     if settings.APP_ENV == "development":
         # post_extras (19/10) fica de fora: no banco de produção ela é criada
-        # pela dona da conta, com o SQL aprovado; enquanto não existe, o app funciona
+        # manualmente por SQL (ver db/models.py); enquanto não existe, o app funciona
         # sem código da peça e primeiro comentário.
         tabelas = [t for t in Base.metadata.sorted_tables if t.name != "post_extras"]
         async with engine.begin() as conn:

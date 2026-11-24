@@ -1,8 +1,8 @@
 'use client'
 
 /**
- * Página Calendário (20/10): espelho só de leitura do calendário oficial,
- * enviado pela sessão Calendário. O app nunca edita nada aqui: só mostra e
+ * Página Calendário (20/10): espelho só de leitura do calendário editorial,
+ * enviado pelo script de envio do backend. O app nunca edita nada aqui: só mostra e
  * copia os textos completos. Lógica de semana e filtro em lib/calendarioEspelho.ts.
  */
 

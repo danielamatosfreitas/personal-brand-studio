@@ -64,8 +64,8 @@ class Settings(BaseSettings):
     # (falha fechado) -- é assim que evita a API ficar aberta entre o deploy
     # deste código e a hora que a variável é configurada no Railway.
     APP_ACCESS_TOKEN: str = ""
-    # Chave própria do envio do espelho do Calendário (20/10): só a sessão
-    # Calendário usa, para mandar o calendario-espelho.json. Vazia = o envio
+    # Chave própria do envio do espelho do Calendário (20/10): só o script de
+    # envio usa, para mandar o calendario-espelho.json. Vazia = o envio
     # fica fechado (falha fechado, como a senha do app).
     CALENDARIO_SYNC_TOKEN: str = ""
     CORS_EXTRA_ORIGINS: str = ""

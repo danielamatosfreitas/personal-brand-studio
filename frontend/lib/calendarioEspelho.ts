@@ -1,8 +1,8 @@
 /**
  * lib/calendarioEspelho.ts
  *
- * Página Calendário (20/10): espelho só de leitura do calendário oficial
- * (arquivo HTML da pasta MARKETING, mantido pela sessão Calendário). Formato
+ * Página Calendário (20/10): espelho só de leitura do calendário editorial.
+ * Formato
  * do espelho: docs/espelho-calendario.md no backend. Aqui fica só a lógica
  * de exibição (semana, filtro, rótulos), em horário de Brasília.
  *

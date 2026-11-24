@@ -37,7 +37,7 @@ yarn-error.log*
 next-env.d.ts
 test-output/
 
-# config local do Claude Code (não é parte do projeto)
+# configuração local de ferramenta de desenvolvimento (não faz parte do projeto)
 .claude/
 
 # gerado de novo pelo next dev a cada execução (Next.js 16)

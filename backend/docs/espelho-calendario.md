@@ -4,14 +4,14 @@ Página **Calendário** do Personal Brand Studio: cópia só de leitura do calen
 
 ## Princípio
 
-- O calendário oficial continua sendo `MARKETING\Calendario_Editorial_Final.html`, mantido pela sessão Calendário.
-- O app guarda só um espelho, enviado pelo Calendário, e **nunca edita nada**.
+- O calendário editorial fica fora do app.
+- O app guarda só um espelho, enviado pelo script de envio, e **nunca edita nada**.
 - Toda tela da página mostra "Atualizado em dd/mm às hh:mm", a partir do campo `gerado_em`.
 - O espelho fica no armazenamento de arquivos do app (o mesmo bucket da mídia), sem tabela no banco:
   - `calendario/espelho.json`: a versão atual;
   - `calendario/espelho-anterior.json`: a versão de antes do último envio.
 
-## Como a sessão Calendário envia
+## Como enviar o espelho
 
 1. Gerar o arquivo `calendario-espelho.json` no formato abaixo, em UTF-8.
 2. Rodar, na pasta `backend`:
@@ -31,7 +31,7 @@ Quando enviar: depois de cada mudança no calendário que mexa em data, hora, te
 {
   "versao": 1,
   "gerado_em": "2026-10-20T12:00:00-03:00",
-  "fonte": "Calendario_Editorial_Final.html",
+  "fonte": "calendario-editorial.html",
   "itens": [
     {
       "id": "2026-10-28-pt105-linkedin-empresa",
@@ -54,15 +54,15 @@ Quando enviar: depois de cada mudança no calendário que mexa em data, hora, te
 }
 ```
 
-Exemplo completo: `docs/exemplo-calendario-espelho.json` (textos do `Textos_dos_Cards.txt`).
+Exemplo completo: `docs/exemplo-calendario-espelho.json`.
 
 ### Campos do arquivo
 
 | Campo | Obrigatório | Formato |
 |---|---|---|
 | `versao` | sim | sempre `1` |
-| `gerado_em` | sim | data e hora em que o Calendário gerou o arquivo, com fuso: `2026-10-20T12:00:00-03:00`. É o "Atualizado em" da página. |
-| `fonte` | não | de onde saiu (ex.: `Calendario_Editorial_Final.html`) |
+| `gerado_em` | sim | data e hora em que o arquivo foi gerado, com fuso: `2026-10-20T12:00:00-03:00`. É o "Atualizado em" da página. |
+| `fonte` | não | de onde saiu (ex.: `calendario-editorial.html`) |
 | `itens` | sim | lista de publicações, no máximo 3000 |
 
 ### Campos de cada item
@@ -113,4 +113,4 @@ Passo a passo para criar a variável no Railway:
 1. Abrir as variáveis do serviço do backend no painel do Railway.
 2. Abrir o arquivo `.sync_token` da pasta `backend` num editor de texto, selecionar tudo e copiar. Fechar o editor sem salvar.
 3. No Railway, clicar em "New Variable". Em nome, escrever `CALENDARIO_SYNC_TOKEN`; em valor, colar (Ctrl+V). Clicar em "Add".
-4. Clicar em "Deploy" (ou "Apply changes") para o serviço reiniciar com a variável. Evitar perto dos horários de posts agendados (9h, 12h e 15h).
+4. Clicar em "Deploy" (ou "Apply changes") para o serviço reiniciar com a variável. Evitar os horários em que há posts agendados.

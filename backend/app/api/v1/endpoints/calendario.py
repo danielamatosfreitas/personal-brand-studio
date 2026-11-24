@@ -2,7 +2,7 @@
 app/api/v1/endpoints/calendario.py
 Espelho do Calendário (20/10), só de leitura no app.
 
-  - POST /calendario/espelho: a sessão Calendário envia o calendario-espelho.json.
+  - POST /calendario/espelho: recebe o calendario-espelho.json do script de envio.
     Protegido pela chave própria CALENDARIO_SYNC_TOKEN, no cabeçalho
     X-Sync-Token (nunca no endereço). Sem a variável no servidor, o envio
     fica fechado.

@@ -346,6 +346,6 @@ export interface EdicaoPost {
 // ── Calendário (espelho só de leitura, 20/10) ────────────────────────────────
 
 export const calendarioApi = {
-  /** Espelho do calendário oficial, enviado pela sessão Calendário. */
+  /** Espelho do calendário editorial, enviado pelo script de envio do backend. */
   espelho: () => request<EspelhoCalendario>('/api/v1/calendario/espelho'),
 }

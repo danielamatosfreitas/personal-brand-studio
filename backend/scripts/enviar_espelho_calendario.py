@@ -1,7 +1,7 @@
 """
 scripts/enviar_espelho_calendario.py
 Envia o calendario-espelho.json para o app (página Calendário, só leitura).
-Usado pela sessão Calendário. Formato do arquivo: docs/espelho-calendario.md.
+Formato do arquivo: docs/espelho-calendario.md.
 
 A chave de sincronização é lida do arquivo local .sync_token (ignorado pelo
 Git), na pasta deste projeto, e vai só no cabeçalho X-Sync-Token. O script
