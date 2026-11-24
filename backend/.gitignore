@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+# Chave de envio do espelho do Calendário (20/10): só local, nunca no Git
+.sync_token
+
+# Persona real usada pela IA (o exemplo fica em config/persona.example.txt)
+config/persona.txt

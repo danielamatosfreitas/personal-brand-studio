@@ -1,0 +1,6 @@
+# Para rodar os testes simulados (pytest tests); não vai para a Railway.
+# Inclui as dependências do app, então um só comando instala tudo o que os testes usam.
+-r requirements.txt
+pytest==8.3.3
+pytest-asyncio==0.24.0
+respx==0.21.1
